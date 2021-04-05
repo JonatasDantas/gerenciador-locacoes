@@ -4,12 +4,12 @@ import Icon from 'react-native-vector-icons/Feather';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../views/home/home';
-import Inventory from '../views/inventory/inventory';
 
 import {LinearGradient} from 'expo-linear-gradient';
 import { StyleSheet, View } from 'react-native';
 import Rentals from './../views/rentals/rentals';
 import Clients from './../views/clients/clients';
+import InventoryStack from './../views/inventory/index';
 
 export default function TabsNavigator() {
     const Tab = createBottomTabNavigator();
@@ -54,7 +54,7 @@ export default function TabsNavigator() {
                     inactiveTintColor: '#777',
                 }}>
                 <Tab.Screen name="Home" component={Home} />
-                <Tab.Screen name="Estoque" component={Inventory} />
+                <Tab.Screen name="Estoque" component={InventoryStack} />
                 <Tab.Screen name="Novo" component={Home} options={() => ({
                     tabBarIcon: ({ tintColor }) => (
                         <View>

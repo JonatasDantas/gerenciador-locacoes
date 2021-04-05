@@ -1,14 +1,14 @@
 import React from 'react';
 import { Body, Header, Left, Right, Title } from 'native-base';
 
-export default function DefaultHeader({ routeName }) {
+export default function DefaultHeader({ routeName, leftContent, rightContent, }) {
     return (
         <Header>
-            <Left />
+            <Left>{leftContent}</Left>
             <Body>
                 <Title>{routeName}</Title>
             </Body>
-            <Right />
+            <Right>{rightContent}</Right>
         </Header>
     );
 }
